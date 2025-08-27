@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hariharan R – Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    /* About Section */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    /* Skills */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    /* Certificates */
+    .cert-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .cert-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .cert-gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .popup img {
+      display: block;
+      margin: 50px auto;
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    /* Contact */
+    .contact-info {
+      text-align: center;
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .contact-info p {
+      margin: 8px 0;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 30px;
+    }
+    footer p {
+      margin-bottom: 15px;
+    }
+    .footer-links a {
+      color: #1abc9c;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    /* Footer Form */
+    .footer-form {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    .footer-form input, .footer-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    .footer-form button {
+      display: block;
+      background: #1abc9c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .footer-form button:hover {
+      background: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hariharan R</h1>
+    <p>B.Tech AI & Data Science | Aspiring Data Analyst</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="images/myphoto.png" alt="Hariharan R" class="profile-pic">
+      <p>
+        I am a third-year B.Tech student in Artificial Intelligence and Data Science 
+        with a CGPA of 7.85. Passionate about turning data into actionable insights, 
+        I am currently enhancing my expertise through a specialized Data Analytics course.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Python Programming:</strong> Experienced in writing efficient code, data analysis, and automation.</li>
+      <li><strong>Machine Learning & AI:</strong> Knowledge of supervised/unsupervised learning, deep learning, and model evaluation.</li>
+      <li><strong>Data Structures & Database Management:</strong> Strong foundation in designing efficient structures and managing relational & NoSQL databases.</li>
+      <li><strong>Data Exploration & Visualization:</strong> Proficient in using libraries/tools like Matplotlib, Pandas, Power BI for insightful visualizations.</li>
+      <li><strong>App Development:</strong> Hands-on experience in building simple apps and deploying them.</li>
+      <li><strong>Information Security:</strong> Understanding of securing data and ensuring system integrity.</li>
+      <li><strong>Data Science Fundamentals:</strong> Covers statistical analysis, hypothesis testing, and core analytics concepts.</li>
+      <li><strong>Software Testing:</strong> Knowledge in manual testing and analyzing software quality.</li>
+    </ul>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="cert-gallery">
+      <img src="certs/c_training.jpg" alt="C Training">
+      <img src="certs/celonis_default_value.jpg" alt="Celonis Default Business Value">
+      <img src="certs/celonis_foundation.jpg" alt="Celonis Default Foundation">
+      <img src="certs/cpp.jpg" alt="CPP Training – IIT Bombay">
+      <img src="certs/diploma_microsoft.jpg" alt="Diploma Certificate in Microsoft">
+      <img src="certs/sql_to_mongo.jpg" alt="From Relational Model SQL to MongoDB">
+      <img src="certs/mongo_basics.jpg" alt="MongoDB Basics for Students">
+      <img src="certs/oracle_hcm.jpg" alt="Oracle HCM Certificate">
+      <img src="certs/oracle_fusion.jpg" alt="Oracle Cloud Fusion">
+    </div>
+  </section>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <img id="popup-img" src="" alt="Certificate">
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> 8838059374</p>
+      <p><strong>Address:</strong> 6/70, Kattukottai, Maruthadi, Naranamangalam, Perambalur, Tamil Nadu - 621109, India</p>
+      <p><strong>Email:</strong> <a href="mailto:inhari2005@gmail.com">inhari2005@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer with Interaction -->
+  <footer>
+    <p>💡 Thank you for visiting my portfolio! I’m always eager to connect with professionals, learners, and collaborators in AI, Data Science, and Analytics.</p>
+
+    <!-- Feedback Form -->
+    <div class="footer-form">
+      <form action="mailto:inhari2005@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:inhari2005@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/" target="_blank">💻 GitHub</a>
+    </div>
+
+    <p>© 2025 Hariharan R. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Popup logic
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+    document.querySelectorAll(".cert-gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        popup.style.display = "block";
+        popupImg.src = img.src;
+      });
+    });
+    popup.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
